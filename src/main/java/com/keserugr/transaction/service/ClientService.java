@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class ClientService {
-
     private final TokenService tokenService;
     private final ApiClient apiClient;
 

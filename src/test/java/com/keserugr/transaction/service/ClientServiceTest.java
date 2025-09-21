@@ -88,5 +88,4 @@ class ClientServiceTest {
         //then
         assertEquals("N/A", email);
     }
-
 }
