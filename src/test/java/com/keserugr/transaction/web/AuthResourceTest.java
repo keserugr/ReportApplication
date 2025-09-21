@@ -23,7 +23,7 @@ class AuthResourceTest {
     private MockMvc mockMvc;
 
     @MockitoBean
-    private TokenService tokenService; // gerçek bean yerine mock
+    private TokenService tokenService;
 
     @Test
     void getToken_returnsTokenFromService() throws Exception {
