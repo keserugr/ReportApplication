@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: transaction
+  data:
+    redis:
+      host: localhost
+      port: 6379
+reporting-api:
+  base-url: https://sandbox-reporting.rpdpymnt.com
+  email: demo@financialhouse.io
+  password: cjaiU8CV
+  token: reporting-api-token
+
+server:
+  port: 8080
