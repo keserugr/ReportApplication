@@ -1,6 +1,8 @@
 package com.keserugr.transaction.service;
 
 import com.keserugr.transaction.client.ApiClient;
+import com.keserugr.transaction.dto.report.TransactionsReportRequest;
+import com.keserugr.transaction.dto.report.TransactionsReportResponse;
 import com.keserugr.transaction.dto.transaction.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -10,10 +12,13 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 @Slf4j
 public class TransactionService {
-    private final TokenService tokenService;
     private final ApiClient apiClient;
 
-    public TransactionListResponse searchTransactions(TransactionListRequest req) {
+    public TransactionsReportResponse getTransactionReport(TransactionsReportRequest req) {
+        return apiClient.transactionsReport(req);
+    }
+
+    public TransactionListResponse getTransactionList(TransactionListRequest req) {
         TransactionListResponse resp = apiClient.transactionList(req);
 
         if (resp.getData() != null) {
