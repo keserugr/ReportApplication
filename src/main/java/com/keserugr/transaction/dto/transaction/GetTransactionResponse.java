@@ -15,4 +15,7 @@ public class GetTransactionResponse {
     private CustomerInfo customerInfo;
     private Merchant merchant;
     private Transaction transaction;
+    private Status status;
+    private Operation operation;
+    private String errorCode;
 }
