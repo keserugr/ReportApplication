@@ -73,7 +73,7 @@ class TransactionServiceTest {
                 .build();
 
         var response = new TransactionListResponse();
-        response.setCurrent_page(1);
+        response.setCurrentPage(1);
         response.setData(List.of(
                 TransactionItem.builder()
                         .customerInfo(CustomerInfo.builder()
@@ -95,7 +95,7 @@ class TransactionServiceTest {
         // given
         var request = TransactionListRequest.builder().build();
         var resp = new TransactionListResponse();
-        resp.setPer_page(1);
+        resp.setCurrentPage(1);
         resp.setData(null);
         when(apiClient.transactionList(request)).thenReturn(resp);
 

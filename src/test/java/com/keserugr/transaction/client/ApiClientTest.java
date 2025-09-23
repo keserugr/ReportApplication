@@ -199,8 +199,8 @@ class ApiClientTest extends WiremockBase{
 
         //then
         assertNotNull(response);
-        assertEquals(50, response.getPer_page());
-        assertEquals(1, response.getCurrent_page());
+        assertEquals(50, response.getPerPage());
+        assertEquals(1, response.getCurrentPage());
         assertEquals(1, response.getFrom());
         assertEquals(50, response.getTo());
         assertNotNull(response.getData());
@@ -244,8 +244,8 @@ class ApiClientTest extends WiremockBase{
         TransactionListResponse response = client.transactionList(transactionListRequest());
 
         assertNotNull(response);
-        assertEquals(50, response.getPer_page());
-        assertEquals(1, response.getCurrent_page());
+        assertEquals(50, response.getPerPage());
+        assertEquals(1, response.getCurrentPage());
         assertEquals(1, response.getFrom());
         assertEquals(50, response.getTo());
         assertNotNull(response.getData());
