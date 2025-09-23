@@ -25,16 +25,6 @@ public class ApiClient {
     private final WebClient webClient;
     private final TokenService tokenService;
 
-    public LoginResponse login(String email, String password) {
-        return webClient.post()
-                .uri("/api/v3/merchant/user/login")
-                .bodyValue(new LoginRequest(email, password))
-                .retrieve()
-                .bodyToMono(LoginResponse.class)
-                .timeout(Duration.ofSeconds(7))
-                .block();
-    }
-
     public TransactionsReportResponse transactionsReport(TransactionsReportRequest request) {
         return doWithRetry(
                 () -> postWithAuth(

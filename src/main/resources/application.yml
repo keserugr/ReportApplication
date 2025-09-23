@@ -8,7 +8,7 @@ spring:
 reporting-api:
   base-url: https://sandbox-reporting.rpdpymnt.com
   email: demo@financialhouse.io
-  password: cjaiU8CV
+  password: '*7onT8GUF3RecPHLwnEg'
   token: reporting-api-token
 
 server:
