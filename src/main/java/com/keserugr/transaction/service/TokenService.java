@@ -1,6 +1,7 @@
 package com.keserugr.transaction.service;
 
 import com.keserugr.transaction.client.ApiClient;
+import com.keserugr.transaction.client.AuthApiClient;
 import com.keserugr.transaction.config.ReportingApiProperties;
 import com.keserugr.transaction.dto.login.LoginResponse;
 import lombok.RequiredArgsConstructor;
@@ -13,7 +14,7 @@ import java.time.Instant;
 @Service
 @RequiredArgsConstructor
 public class TokenService {
-    private final ApiClient client;
+    private final AuthApiClient client;
     private final RedisTemplate<String, String> redisTemplate;
     private final ReportingApiProperties properties;
 

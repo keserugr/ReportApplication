@@ -1,6 +1,7 @@
 package com.keserugr.transaction.service;
 
 import com.keserugr.transaction.client.ApiClient;
+import com.keserugr.transaction.client.AuthApiClient;
 import com.keserugr.transaction.config.ReportingApiProperties;
 import com.keserugr.transaction.dto.login.LoginResponse;
 import org.junit.jupiter.api.BeforeEach;
@@ -22,7 +23,7 @@ import static org.mockito.Mockito.*;
 class TokenServiceTest {
 
     @Mock
-    ApiClient apiClient;
+    AuthApiClient apiClient;
 
     @Mock
     ReportingApiProperties properties;

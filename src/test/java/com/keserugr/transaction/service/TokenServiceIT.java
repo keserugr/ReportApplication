@@ -1,6 +1,7 @@
 package com.keserugr.transaction.service;
 
 import com.keserugr.transaction.client.ApiClient;
+import com.keserugr.transaction.client.AuthApiClient;
 import com.keserugr.transaction.config.ReportingApiProperties;
 import com.keserugr.transaction.dto.login.LoginResponse;
 import org.junit.jupiter.api.BeforeEach;
@@ -26,7 +27,7 @@ public class TokenServiceIT {
     static final GenericContainer<?> redisContainer = new GenericContainer<>("redis:7-alpine")
             .withExposedPorts(6379);
 
-    private ApiClient apiClient;
+    private AuthApiClient apiClient;
 
     private RedisTemplate<String, String> redisTemplate;
     private ReportingApiProperties properties;
@@ -50,7 +51,7 @@ public class TokenServiceIT {
         redisTemplate.setHashValueSerializer(stringRedisSerializer);
         redisTemplate.afterPropertiesSet();
 
-        apiClient = Mockito.mock(ApiClient.class);
+        apiClient = Mockito.mock(AuthApiClient.class);
 
         properties = new ReportingApiProperties();
         properties.setEmail("test@email.com");
